@@ -3,7 +3,6 @@ package pizza;
 import java.util.ArrayList;
 
 public class PizzaShop {
-
     public static void main(String[] args) {
         ArrayList<Pizza> pizzaStack1 = makePizzas();
         ArrayList<Pizza> pizzaStack2 = makePizzas();
@@ -16,9 +15,9 @@ public class PizzaShop {
     public static ArrayList<Pizza> makePizzas() {
         ArrayList<Pizza> pizzas = new ArrayList<>();
 
-        pizzas.add(new Pizza("Pepperoni", "Large", "Thin"));
-        pizzas.add(new Pizza("Cheese", "Small", "Hand-tossed"));
-        pizzas.add(new Pizza("Supreme", "Extra-large", "Pan"));
+        pizzas.add(new Pizza("Pepperoni", SizeType.LARGE, CrustType.THIN));
+        pizzas.add(new Pizza("Cheese", SizeType.SMALL, CrustType.HAND_TOSSED));
+        pizzas.add(new Pizza("Supreme", SizeType.EXTRA_LARGE, CrustType.PAN));
 
         return pizzas;
     }

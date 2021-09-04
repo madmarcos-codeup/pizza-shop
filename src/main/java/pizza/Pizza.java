@@ -2,19 +2,19 @@ package pizza;
 
 public class Pizza {
     private String pizzaType;
-    private String size;
-    private String crustType;
+    private SizeType size;
+    private CrustType crust;
 
-    public Pizza(String pizzaType, String size, String crustType) {
+    public Pizza(String pizzaType, SizeType size, CrustType crust) {
         this.pizzaType = pizzaType;
         this.size = size;
-        this.crustType = crustType;
+        this.crust = crust;
     }
 
     @Override
     public String toString() {
         // e.g., Large Thin Pepperoni pizza
-        return size + " " + getCrustType() + " " + pizzaType + " pizza";
+        return getSize() + " " + getCrustType() + " " + pizzaType + " pizza";
     }
 
     // accessors
@@ -28,21 +28,49 @@ public class Pizza {
     }
 
     public String getSize() {
-        return size;
+        String sizeString = "Unknown size";
+        switch(size) {
+            case SMALL:
+                sizeString = "Small";
+                break;
+            case MEDIUM:
+                sizeString = "Medium";
+                break;
+            case LARGE:
+                sizeString = "Large";
+                break;
+            case EXTRA_LARGE:
+                sizeString = "Extra-large";
+                break;
+            default:
+                break;
+        }
+        return sizeString;
     }
 
-    public void setSize(String size) {
+    public void setSize(SizeType size) {
         this.size = size;
     }
 
     public String getCrustType() {
-        if(crustType.equalsIgnoreCase("thin") || crustType.equalsIgnoreCase("hand-tossed")) {
-            return crustType + " crust";
+        String crustString = "Unknown crust";
+        switch(crust) {
+            case PAN:
+                crustString = "Pan";
+                break;
+            case THIN:
+                crustString = "Thin crust";
+                break;
+            case HAND_TOSSED:
+                crustString = "Hand-tossed crust";
+                break;
+            default:
+                break;
         }
-        return crustType;
+        return crustString;
     }
 
-    public void setCrustType(String crustType) {
-        this.crustType = crustType;
+    public void setCrustType(CrustType crust) {
+        this.crust = crust;
     }
 }
