@@ -5,20 +5,19 @@ import java.util.ArrayList;
 public class PizzaShop {
 
     public static void main(String[] args) {
-        ArrayList<Pizza> pizzaStack1 = makePizzas();
-        ArrayList<Pizza> pizzaStack2 = makePizzas();
-        pizzaStack2.remove(pizzaStack2.size() - 1);
+        Order order1 = new Order("Bob Smith");
+        order1.addPizza(new Pizza("Pepperoni", SizeType.LARGE, CrustType.THIN));
+        order1.addPizza(new Pizza("Cheese", SizeType.SMALL, CrustType.HAND_TOSSED));
 
-        printPizzas(pizzaStack1);
-        printPizzas(pizzaStack2);
+        System.out.println(order1);
     }
 
     public static ArrayList<Pizza> makePizzas() {
         ArrayList<Pizza> pizzas = new ArrayList<>();
 
-        pizzas.add(new Pizza("Pepperoni", "Large", "Thin"));
-        pizzas.add(new Pizza("Cheese", "Small", "Hand-tossed"));
-        pizzas.add(new Pizza("Supreme", "Extra-large", "Pan"));
+        pizzas.add(new Pizza("Pepperoni", SizeType.LARGE, CrustType.THIN));
+        pizzas.add(new Pizza("Cheese", SizeType.SMALL, CrustType.HAND_TOSSED));
+        pizzas.add(new Pizza("Supreme", SizeType.EXTRA_LARGE, CrustType.PAN));
 
         return pizzas;
     }
