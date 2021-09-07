@@ -3,13 +3,13 @@ package pizza;
 import java.util.ArrayList;
 
 public class PizzaShop {
-    public static void main(String[] args) {
-        ArrayList<Pizza> pizzaStack1 = makePizzas();
-        ArrayList<Pizza> pizzaStack2 = makePizzas();
-        pizzaStack2.remove(pizzaStack2.size() - 1);
 
-        printPizzas(pizzaStack1);
-        printPizzas(pizzaStack2);
+    public static void main(String[] args) {
+        Order order1 = new Order("Bob Smith");
+        order1.addPizza(new Pizza("Pepperoni", SizeType.LARGE, CrustType.THIN));
+        order1.addPizza(new Pizza("Cheese", SizeType.SMALL, CrustType.HAND_TOSSED));
+
+        System.out.println(order1);
     }
 
     public static ArrayList<Pizza> makePizzas() {

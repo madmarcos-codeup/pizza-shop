@@ -73,4 +73,12 @@ public class Pizza {
     public void setCrustType(CrustType crust) {
         this.crust = crust;
     }
+
+    public SizeType getSizeRaw() {
+        return size;
+    }
+
+    public CrustType getCrustRaw() {
+        return crust;
+    }
 }

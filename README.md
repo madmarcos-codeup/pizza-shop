@@ -13,14 +13,20 @@ In your main, call makePizza and then call printPizza
 
 ------------------------------------------------------------
 
-TODO: exercise part 2
+Exercise part 2
+
+enums for size and crust type
+
+created an order class with pizzas in a collection
+
+created a pizza price calculator and an order toString() method
+
+
+TODO Part 3
 
 maybe start with user interaction input loop to build a pizza
-
-maybe start with pizza size and crust selections as an Enum
 
 add to pizza class an ingredients arraylist
 how do we want to represent an ingredient (lead us to the Enum)
 
-how can we make pizzas to order?
-some user interaction 
+user interaction for building an order
